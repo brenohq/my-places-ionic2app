@@ -1,9 +1,11 @@
-import { PlacesService } from './../services/places.service';
-import { NewPlacePage } from './../pages/new-place/new-place';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { NewPlacePage } from './../pages/new-place/new-place';
+import { PlacesService } from './../services/places.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { HomePage } from '../pages/home/home';
     NewPlacePage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

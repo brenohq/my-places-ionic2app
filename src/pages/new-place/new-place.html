@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Add Place</ion-title>
+    <ion-title>Adicionar Localização</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,10 +10,18 @@
 <ion-content padding>
   <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
     <ion-item>
-      <ion-label>Title</ion-label>
+      <ion-label>Nova Localização</ion-label>
       <ion-input type="text" name="title" ngModel required></ion-input>
     </ion-item>
 
-    <button ion-button block type="submit" [disabled]="!f.valid">Add Place</button>
+    <button ion-button block type="submit" [disabled]="!f.valid">Adicionar Localização</button>
   </form>
+  <ion-grid>
+    <ion-row>
+      <button ion-button block (click)="onLocateUser()"> Localizar-Me </button>
+    </ion-row>
+
+
+
+  </ion-grid>
 </ion-content>
